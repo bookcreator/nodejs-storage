@@ -1750,7 +1750,7 @@ File.prototype.getSignedUrl = function(config, callback) {
     resumable: 'POST',
   }[config.action];
 
-  const name = encodeURIComponent(this.name);
+  const name = this.name;
   config.resource = '/' + this.bucket.name + '/' + name;
 
   let extensionHeadersString = '';
